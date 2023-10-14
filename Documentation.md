@@ -48,7 +48,7 @@ In both Jenkinsfilev1 and Jenkinsfilev2, the following commands were employed to
 For Jenkinsfilev1:
 
 ```shell
-scp setup.sh ubuntu@34.238.52.125:/home/ubuntu
+scp  /var/lib/jenkins/workspace/Deployment5_new_main/setup.sh ubuntu@34.238.52.125:/home/ubuntu
 ssh ubuntu@34.238.52.125 'bash -s </home/ubuntu/setup.sh'
 ```
 
@@ -58,6 +58,20 @@ For Jenkinsfilev2:
 scp setup2.sh ubuntu@34.238.52.125:/home/ubuntu
 ssh ubuntu@34.238.52.125 'bash -s </home/ubuntu/setup2.sh'
 ```
+
+## Initial Deployment using Jenkinsfilev1
+
+Created a multi branch pipeline to run the Jenkinsfilev1 and deploy the Retail Banking application
+
+**Result**: Succesfully deployed the flask application
+
+![image](https://github.com/SaraGurungLABS01/Deployment_5/assets/140760966/7b3b287c-ebd2-4db7-8c29-dfac7c312226)
+
+![image](https://github.com/SaraGurungLABS01/Deployment_5/assets/140760966/6be17070-4747-415d-b301-6b4dcde8a904)
+
+
+
+
 
 
 
