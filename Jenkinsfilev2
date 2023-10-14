@@ -12,7 +12,7 @@ pipeline {
   steps {
      sh '''#!/bin/bash
      scp  /var/lib/jenkins/workspace/Deployment5_new_main/setup2.sh ubuntu@34.238.52.125:/home/ubuntu
-     ssh ubuntu@34.238.52.125 'bash -s' </home/ubuntu/setup2.sh
+     ssh ubuntu@34.238.52.125 'bash -s </home/ubuntu/setup2.sh'
 
     '''
       }
