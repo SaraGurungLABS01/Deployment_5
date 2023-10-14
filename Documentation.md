@@ -60,6 +60,12 @@ For Jenkinsfilev2:
 scp setup2.sh ubuntu@34.238.52.125:/home/ubuntu
 ssh ubuntu@34.238.52.125 'bash -s </home/ubuntu/setup2.sh'
 ```
+```shell
+scp  /var/lib/jenkins/workspace/Deployment5_new_main/pkill.sh ubuntu@34.238.52.125:/home/ubuntu
+ssh ubuntu@34.238.52.125 'bash -s </home/ubuntu/pkill.sh'
+```
+
+
 
 ## Initial Deployment using Jenkinsfilev1
 
@@ -72,6 +78,23 @@ Created a multi branch pipeline to run the Jenkinsfilev1 and deploy the Retail B
 ![image](https://github.com/SaraGurungLABS01/Deployment_5/assets/140760966/6be17070-4747-415d-b301-6b4dcde8a904)
 
 ## Modification to HTML File 
+
+Made the following changes in the html file "home.html"
+
+![image](https://github.com/SaraGurungLABS01/Deployment_5/assets/140760966/eb190222-8cac-44ce-b6fa-7e117eed8a37)
+
+## Final Deployment using Jenkinsfilev2
+
+Ran build again.
+
+![image](https://github.com/SaraGurungLABS01/Deployment_5/assets/140760966/a0383bc1-b784-4808-8f5e-29d6877e0e96)
+
+
+![image](https://github.com/SaraGurungLABS01/Deployment_5/assets/140760966/aa9266ef-e6e2-4dc9-a20a-a454e7789fbc)
+
+
+
+
 
 
 
