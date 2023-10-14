@@ -41,5 +41,29 @@ Similar to software configuration in first instance following software packages 
    - `python3.7-venv`
 Similarly, `second_last.sh` script was used to automate the software installation process.
 
+## Jenkinsfilev1 & Jenkinsfilev2 Integration:
+
+In both Jenkinsfilev1 and Jenkinsfilev2, the following commands were employed to establish SSH connections to the second instance, facilitating the retrieval and execution of the necessary scripts at each step defined within the Jenkinsfile. This achievement represents a significant advancement in automating deployment and configuration tasks, leading to a more streamlined process for executing scripts on the secondary instance as part of the Jenkins pipeline.
+
+For Jenkinsfilev1:
+
+```shell
+scp setup.sh ubuntu@34.238.52.125:/home/ubuntu
+ssh ubuntu@34.238.52.125 'bash -s </home/ubuntu/setup.sh'
+
+For Jenkinsfilev2:
+
+```shell
+scp setup2.sh ubuntu@34.238.52.125:/home/ubuntu
+ssh ubuntu@34.238.52.125 'bash -s </home/ubuntu/setup2.sh'
+
+
+
+
+
+
+
+
+
 
 
