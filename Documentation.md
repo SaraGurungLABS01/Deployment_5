@@ -7,7 +7,9 @@
 1. Created a Jenkins user account.
 2. Set up a password for the Jenkins user.
 
-**Note**: For detailed steps, refer to Deployment 3 documentation.
+**Note**: 
+- For detailed steps, refer to Deployment 3 documentation.
+- 'sudo -u jenkins -i' to switch user to Jenkins
 
 **3: Generate SSH Keys**
 1. Used the `ssh-keygen` command to generate a public and private SSH key pair.
