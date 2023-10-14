@@ -9,7 +9,7 @@
 
 **Note**: 
 - For detailed steps, refer to Deployment 3 documentation.
-- 'sudo -u jenkins -i' to switch user to Jenkins
+- `sudo -u jenkins -i` to switch user to Jenkins
 
 **3: Generate SSH Keys**
 1. Used the `ssh-keygen` command to generate a public and private SSH key pair.
@@ -70,6 +70,8 @@ Created a multi branch pipeline to run the Jenkinsfilev1 and deploy the Retail B
 ![image](https://github.com/SaraGurungLABS01/Deployment_5/assets/140760966/7b3b287c-ebd2-4db7-8c29-dfac7c312226)
 
 ![image](https://github.com/SaraGurungLABS01/Deployment_5/assets/140760966/6be17070-4747-415d-b301-6b4dcde8a904)
+
+## Modification to HTML File 
 
 
 
