@@ -4,7 +4,8 @@ pipeline {
     stage ('Clean') {
       steps {
         sh '''#!/bin/bash
-        echo "command to run the pkill.sh"
+        scp  /var/lib/jenkins/workspace/Deployment5_new_main/pkill.sh ubuntu@34.238.52.125:/home/ubuntu
+        ssh ubuntu@34.238.52.125 'bash -s </home/ubuntu/pkill.sh'
         '''
      }
    }
