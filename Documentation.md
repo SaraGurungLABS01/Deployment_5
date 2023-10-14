@@ -50,12 +50,14 @@ For Jenkinsfilev1:
 ```shell
 scp setup.sh ubuntu@34.238.52.125:/home/ubuntu
 ssh ubuntu@34.238.52.125 'bash -s </home/ubuntu/setup.sh'
+```
 
 For Jenkinsfilev2:
 
 ```shell
 scp setup2.sh ubuntu@34.238.52.125:/home/ubuntu
 ssh ubuntu@34.238.52.125 'bash -s </home/ubuntu/setup2.sh'
+```
 
 
 
