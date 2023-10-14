@@ -1,4 +1,4 @@
-## Jenkins Installation/Configuration and SSH coonection
+## Jenkins Installation/Configuration and SSH connection in first instance
 
 **1: Install Jenkins**
 1. Followed the official Jenkins installation documentation 
@@ -33,3 +33,13 @@
 
 - The `deploy_jenkins.sh` script was used to automate the Jenkins installation process.
 - The `second_last.sh` script was used to automate the final step of software installation in the Ubuntu user account.
+
+## Software configuration in second instance
+Similar to software configuration in first instance following software packages were installed:
+   - `software-properties-common`
+   - `python3.7`
+   - `python3.7-venv`
+Similarly, `second_last.sh` script was used to automate the software installation process.
+
+
+
