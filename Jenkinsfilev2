@@ -11,13 +11,11 @@ pipeline {
  stage ('Deploy') {
   steps {
      sh '''#!/bin/bash
-     echo "command to run the setup2.sh"
-     scp setup2.sh ubuntu@34.238.52.125:/home/ubuntu
-     ssh ubuntu@34.238.52.125 'bash -s </home/ubuntu/setup2.sh'
+     scp  /var/lib/jenkins/workspace/Deployment5_new_main/setup2.sh ubuntu@34.238.52.125:/home/ubuntu
+     ssh ubuntu@34.238.52.125 'bash -s' </home/ubuntu/setup2.sh
+
     '''
       }
     }
   }
 }
-scp  /var/lib/jenkins/workspace/Deployment_5_main/setup2.sh ubuntu@34.238.52.125:/home/ubuntu
-ssh ubuntu@34.238.52.125 'bash -s' </home/ubuntu/setup2.sh
