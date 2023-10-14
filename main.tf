@@ -21,8 +21,8 @@ resource "aws_instance" "instance_1_dep5" {
   key_name               = var.key_name
   associate_public_ip_address = true  # Enable Auto-assign public IP
 
-  user_data = file("Jenkins.sh")
-
+  user_data = "${file("Jenkins.sh")}"
+  
   tags = {
     "Name" : "instance_Dep5_1"
   }
@@ -39,7 +39,7 @@ resource "aws_instance" "instance_2_dep5" {
   key_name               = var.key_name
   associate_public_ip_address = true  # Enable Auto-assign public IP
 
-  user_data = file("pyt.sh")
+  user_data = "${file("pyt.sh")}"
 
   tags = {
     "Name" : "instance_Dep5_2"
