@@ -1,3 +1,14 @@
+## Purpose
+
+The purpose of this project is to demonstrate the end-to-end deployment of a highly available and secure web application infrastructure using Terraform, AWS services, and Jenkins automation. The primary objective is to create a Virtual Private Cloud (VPC) with specific components, including two availability zones, public subnets, and EC2 instances with a focus on security, accessibility, and automation. The deployment aims to achieve a reliable and scalable architecture for hosting web applications while implementing best practices for network and security configurations. Additionally, it involves the installation of Jenkins for continuous integration and deployment, creating a robust foundation for future application development and maintenance. The documentation and Jenkins pipeline execution will provide a clear path for making changes to the deployed application while ensuring security and scalability, thereby enabling a streamlined development and deployment workflow.
+
+## Building our own Infrastructure using Terraform
+
+Terraform as Infrastructure as code manages and provisions infrastructure through code instead of through manual process. Prior to this deployment, we were configuring infrastructure resources through AWS Cloud UI.
+
+In this Terraform-based infrastructure provisioning project, we've crafted a robust environment in Amazon Web Services to host our web application and streamline deployment processes. At the heart of this architecture is an Amazon Virtual Private Cloud (VPC) that provides network isolation and control. Within the VPC, we've established two Availability Zones (AZs) to enhance availability and fault tolerance. The VPC further contains two public subnets to house our Amazon Elastic Compute Cloud (EC2) instances. These EC2 instances play a pivotal role—our first instance serves as a Jenkins automation server, allowing for continuous integration and deployment, while the second hosts the application. To ensure secure access, we've employed a custom security group that regulates incoming and outgoing traffic for the instances on specified ports (8080, 8000, and 22). To route traffic appropriately, we've configured a dedicated route table. These resources collectively form a resilient and scalable infrastructure, empowering us to maintain and deploy our application with efficiency and security.
+
+
 ## Jenkins Installation/Configuration and SSH connection in first instance
 
 **1: Install Jenkins**
@@ -47,14 +58,14 @@ Similarly, `second_last.sh` script was used to automate the software installatio
 
 In both Jenkinsfilev1 and Jenkinsfilev2, the following commands were employed to establish SSH connections to the second instance, facilitating the retrieval and execution of the necessary scripts at each step defined within the Jenkinsfile. This achievement represents a significant advancement in automating deployment and configuration tasks, leading to a more streamlined process for executing scripts on the secondary instance as part of the Jenkins pipeline.
 
-For Jenkinsfilev1:
+**For Jenkinsfilev1:**
 
 ```shell
 scp  /var/lib/jenkins/workspace/Deployment5_new_main/setup.sh ubuntu@34.238.52.125:/home/ubuntu
 ssh ubuntu@34.238.52.125 'bash -s </home/ubuntu/setup.sh'
 ```
 
-For Jenkinsfilev2:
+**For Jenkinsfilev2:**
 
 ```shell
 scp setup2.sh ubuntu@34.238.52.125:/home/ubuntu
