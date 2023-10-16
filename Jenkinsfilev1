@@ -33,7 +33,7 @@ pipeline {
                 '''
             }
         }
-        stage(('Reminder')) {
+        stage('Reminder') {
             steps {
                 sh '''#!/bin/bash
                 echo -e "##############################################################\n # The Application should be running on your other instance!! #\n ##############################################################"
