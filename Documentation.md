@@ -76,14 +76,32 @@ scp  /var/lib/jenkins/workspace/Deployment5_new_main/pkill.sh ubuntu@34.238.52.1
 ssh ubuntu@34.238.52.125 'bash -s </home/ubuntu/pkill.sh'
 ```
 
- **Steps**
-- Created a new branch "new_branch2" using "git checkout -b new_branch2" for Jenkinsfile changes.
-- Made changes to the Jenkinsfile and used "git add" to stage them.
-- Committed changes with "git commit" and provided a descriptive message.
-- Pushed the committed changes to "new_branch2" on GitHub using "git push origin new_branch2."
+ ## Steps
+
+***Step 1***: Clone the Repository and Navigate to the Directory
+```bash
+git clone https://github.com/SaraGurungLABS01/Deployment_5.git
+cd Deployment_5/
+```
+***Step 2***:  Create a New Branch and Modify Jenkins Files
+```bash
+git checkout -b new_branch2
+sudo nano Jenkinsfilev1
+sudo nano Jenkinsfilev2
+```
+***Step 3***: Commit Changes
+```bash
+git add Jenkinsfilev1
+git add Jenkinsfilev2
+git commit -m "Required changes for successful deployment"
+```
+***Step 4***: Push Changes to GitHub
+```bash
+git push origin new_branch2
+```
+***Remaining steps in the Github account***
 - Created a pull request on GitHub detailing the changes.
 - Successfully merged the pull request into the main branch.
-
 
 ## Performance Monitoring
 Monitor Server Performance:
