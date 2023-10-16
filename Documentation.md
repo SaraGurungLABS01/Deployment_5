@@ -94,6 +94,13 @@ Made the following changes in the html file "home.html"
 
 ![image](https://github.com/SaraGurungLABS01/Deployment_5/assets/140760966/eb190222-8cac-44ce-b6fa-7e117eed8a37)
 
+
+In the real world, businesses and developers frequently update web application interfaces to adapt to evolving user preferences, industry trends, or regulatory requirements. For instance, they may need to change the appearance, layout, or content of web pages to align with a rebranding effort or incorporate new functionalities.
+
+These changes could be as simple as updating text, colors, or images, or as complex as adding interactive components and enhancing navigation. Furthermore, web applications may need to remain in sync with backend systems, databases, and third-party services, which often necessitates front-end modifications.
+
+In our case, the HTML modification represents a scenario where, in response to user feedback or a strategic decision, we've improved a web page to enhance the user experience. In this context, our deployment process provides a structured and automated way to roll out these changes.
+
 ## Final Deployment using Jenkinsfilev2
 
 Ran build again.
@@ -102,6 +109,67 @@ Ran build again.
 
 
 ![image](https://github.com/SaraGurungLABS01/Deployment_5/assets/140760966/aa9266ef-e6e2-4dc9-a20a-a454e7789fbc)
+
+
+The act of deploying the updated HTML file is a reflection of a real-world deployment process. In a production environment, deploying these types of changes is a crucial and routine task. It involves maintaining service availability and reliability while incorporating updates.
+
+By demonstrating the second deployment, we showcase how infrastructure automation with Terraform and continuous integration with Jenkins significantly ease the process of updating a web application. This approach ensures minimal disruption to the application's availability and is essential for maintaining a seamless user experience.
+
+In summary, the modifications to the HTML file in this second deployment exemplify the iterative and dynamic nature of web development and the importance of efficient, automated deployment processes in keeping web applications aligned with real-world business and user needs.
+
+## Issues and Troubleshooting
+
+During the deployment process, several issues were encountered. Some of them are:
+
+**1. No Public Ip's for both of my instances** 
+
+![image](https://github.com/SaraGurungLABS01/Deployment_5/assets/140760966/1859a351-f214-4949-a8bb-473dea26231a)
+
+**Resolution:**
+After including the following line of code in the Instance resource block:
+
+```terraform
+associate_public_ip_address = true  # Enable Auto-assign public IP
+```
+
+The successful implementation of the associate_public_ip_address attribute within the Instance resource block enabled the automatic assignment of public IP addresses to the user's EC2 instances. This resolution effectively addressed the initial problem of missing public IPs for the instances. Consequently, the instances now possess associated public IP addresses, facilitating internet connectivity.
+
+**2. SSH Permission Denied**
+
+The error indicated that Jenkins was unable to authenticate via SSH key when connecting to a remote server.
+
+![image](https://github.com/SaraGurungLABS01/Deployment_5/assets/140760966/40d4d03e-4760-4e79-ba6e-a79f650a180d)
+![image](https://github.com/SaraGurungLABS01/Deployment_5/assets/140760966/3304471f-8fc2-4c8f-9d9d-978ae73a5fd3)
+
+**Resolution:**
+
+Make sure to sign into the Jenkins user and test the ssh connection to the second instance. Prior to the resolution, SSH connection was established between the user (Ubuntu) and the second instance.
+
+Use the below command to switch to jenkins user:
+
+```bash
+sudo -u jenkins -i
+```
+
+
+
+
+
+
+
+## Optimization
+
+**Should you place both instances in the public subnet? Or should you place them in a private subnet? Explain why?**
+
+In this deployment scenario, it's advisable to place the Jenkins server in a private subnet for enhanced security while accommodating the other application instance in a public subnet. This configuration provides a balance between security and accessibility. Placing the Jenkins server in a private subnet shields it from direct internet access, reducing potential security risks, and ensuring the sensitive Jenkins environment is protected. Simultaneously, the application instance in the public subnet can effectively interact with external resources and users, maintaining accessibility. This approach aligns with security best practices and creates a robust and secure foundation for our infrastructure.
+
+
+
+
+
+
+
+
 
 
 
