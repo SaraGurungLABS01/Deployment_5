@@ -193,6 +193,11 @@ sudo -u jenkins -i
 ```
 
 
+## System Design
+
+![image](https://github.com/SaraGurungLABS01/Deployment_5/assets/140760966/f6a14dec-a1c8-46fc-931a-a18f97324389)
+
+
 
 
 
