@@ -9,7 +9,7 @@ pipeline {
         '''
      }
    }
- stage ('Deploy') {
+ stage (('Deploy')) {
   steps {
      sh '''#!/bin/bash
      scp  /var/lib/jenkins/workspace/Deployment5_new_main/setup2.sh ubuntu@34.238.52.125:/home/ubuntu
