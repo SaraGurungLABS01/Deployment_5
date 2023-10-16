@@ -76,6 +76,26 @@ scp  /var/lib/jenkins/workspace/Deployment5_new_main/pkill.sh ubuntu@34.238.52.1
 ssh ubuntu@34.238.52.125 'bash -s </home/ubuntu/pkill.sh'
 ```
 
+ **Steps**
+- Created a new branch "new_branch2" using "git checkout -b new_branch2" for Jenkinsfile changes.
+- Made changes to the Jenkinsfile and used "git add" to stage them.
+- Committed changes with "git commit" and provided a descriptive message.
+- Pushed the committed changes to "new_branch2" on GitHub using "git push origin new_branch2."
+- Created a pull request on GitHub detailing the changes.
+- Successfully merged the pull request into the main branch.
+
+
+## Performance Monitoring
+Monitor Server Performance:
+- Use tools like htop for real-time monitoring and utilize CloudWatch or Datadog for comprehensive performance metrics.
+- Created a CloudWatch alarm to receive notifications when CPU usage exceeds 10% for 5 minutes.
+    - Configure the alarm to trigger actions such as sending email notifications or executing automated responses when the threshold is breached.
+    - By setting up CloudWatch alarms, we were able to proactively monitor and respond to CPU usage anomalies, ensuring the smooth operation of our application on AWS EC2.
+ 
+***Some helpful links:***
+- https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatch-Agent-on-EC2-Instance-fleet.html
+- https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ConsoleAlarms.html
+
 
 
 ## Initial Deployment using Jenkinsfilev1
